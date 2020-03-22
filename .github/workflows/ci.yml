@@ -1,0 +1,11 @@
+name: CI
+
+on: [push]
+
+jobs:
+  eslint:
+    name: eslint check
+    runs-on: ubuntu-18.04
+    steps:
+        run: |
+          make lint
