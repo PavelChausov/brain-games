@@ -22,6 +22,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
         # Add environment variables
+        name: npm install
+        # Install and build project
+        run: |
+          make install
         env:
           CI: true
       - name: Run linter
