@@ -3,9 +3,12 @@ name: CI
 on: [push]
 
 jobs:
-  eslint:
-    name: eslint check
+  build:
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [13.x]
+    name: eslint check
     steps:
         run: |
           make lint
