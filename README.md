@@ -2,16 +2,16 @@
 ![CI](https://github.com/pavelchausov/frontend-project-lvl1/workflows/CI/badge.svg)
 
 BRAIN-EVEN:
-[![asciicast](https://asciinema.org/a/TpniAwTlmxLPwCBNwuOIZZRTa.svg)](https://asciinema.org/a/TpniAwTlmxLPwCBNwuOIZZRTa)
+[![asciicast](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip.svg)](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip)
 
 BRAIN-CALC:
-[![asciicast](https://asciinema.org/a/krMqf7d8yFdHCF9vv1upemM8d.svg)](https://asciinema.org/a/krMqf7d8yFdHCF9vv1upemM8d)
+[![asciicast](https://asciinema.org/a/qQ1JeGLsWax9e344btvqvPfAs.svg)](https://asciinema.org/a/qQ1JeGLsWax9e344btvqvPfAs)
 
 BRAIN-GCD:
-[![asciicast](https://asciinema.org/a/BmbwFeWZvluDVbR6QO8e9PnPx.svg)](https://asciinema.org/a/BmbwFeWZvluDVbR6QO8e9PnPx)
+[![asciicast](https://asciinema.org/a/8Ffp7PbUKwEQnbF7hDI63id1D.svg)](https://asciinema.org/a/8Ffp7PbUKwEQnbF7hDI63id1D)
 
 BRAIN-PROGRESSION:
-[![asciicast](https://asciinema.org/a/HdwNA60wQQKqOvNhFWsAkd15N.svg)](https://asciinema.org/a/HdwNA60wQQKqOvNhFWsAkd15N)
+[![asciicast](https://asciinema.org/a/US7E11Plvh6Qhm5XSBzmhNn8q.svg)](https://asciinema.org/a/US7E11Plvh6Qhm5XSBzmhNn8q)
 
 BRAIN-PRIME:
-[![asciicast](https://asciinema.org/a/CF5xhp1gXaC6kLPQR7E85jF4I.svg)](https://asciinema.org/a/CF5xhp1gXaC6kLPQR7E85jF4I)
+[![asciicast](https://asciinema.org/a/TTRD8KmqMtT4GQiCkqimOKpdJ.svg)](https://asciinema.org/a/TTRD8KmqMtT4GQiCkqimOKpdJ)

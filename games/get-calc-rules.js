@@ -15,9 +15,10 @@ const getCalcRules = () => {
   ];
   const rules = 'What is the result of the expression?';
   const makeMove = () => {
-    const number1 = Math.floor(Math.random() * Math.floor(100));
-    const number2 = Math.floor(Math.random() * Math.floor(100));
-    const operationIndex = Math.floor(Math.random() * Math.floor(3));
+    const limit = 100;
+    const number1 = Math.floor(Math.random() * Math.floor(limit));
+    const number2 = Math.floor(Math.random() * Math.floor(limit));
+    const operationIndex = Math.floor(Math.random() * Math.floor(operations.length));
     const makeQuestion = operations[operationIndex];
     return makeQuestion(number1, number2);
   };
