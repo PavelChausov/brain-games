@@ -7,39 +7,31 @@ const greetings = () => {
   return userName;
 };
 
-const makeMessages = ({ userName, rules }) => ({
-  rules: () => console.log(rules),
-  question: (q) => readlineSync.question(`Question: ${q} \nYour answer: `),
-  win: () => console.log(`Congratulations, ${userName}!`),
-  loss: (wrongAnswer, correctAnswer) => console.log(`"${wrongAnswer}" is the wrong answer ;(. Correct answer was "${correctAnswer}".`
-    + `\nLets try again, ${userName}!`),
-  correct: () => console.log('Correct!'),
-});
-
 const maxRoundsCnt = 3;
 
-const game = ({ userName, gameRules }) => {
+const game = (gameRules) => {
+  const userName = greetings();
   const { rules, makeMove } = gameRules;
-  const messages = makeMessages({ userName, rules });
-  messages.rules();
-  const iter = (roundNumber) => {
+  console.log(rules);
+  const iter = (roundNumber = 0) => {
     if (roundNumber === maxRoundsCnt) {
-      messages.win();
+      console.log(`Congratulations, ${userName}!`);
       return null;
     }
     const {
       question,
       correctAnswer,
     } = makeMove();
-    const userAnswer = messages.question(question);
+    const userAnswer = readlineSync.question(`Question: ${question} \nYour answer: `);
     if (userAnswer.toString() !== correctAnswer.toString()) {
-      messages.loss(userAnswer, correctAnswer);
+      console.log(`"${userAnswer}" is the wrong answer ;(. Correct answer was "${correctAnswer}".`
+        + `\nLets try again, ${userName}!`);
       return null;
     }
-    messages.correct();
+    console.log('Correct!');
     return iter(roundNumber + 1);
   };
-  return iter(0);
+  return iter();
 };
 
 export { greetings, game };

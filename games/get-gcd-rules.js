@@ -1,3 +1,5 @@
+import getRandomNumber from '../utils/get-random-number.js';
+
 const gcd = (a, b) => {
   if (!b) {
     return a;
@@ -5,12 +7,14 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
+const rules = 'Find the greatest common divisor of given numbers.';
+const minNumber = 1;
+const maxNumber = 100;
+
 const getGCDRules = () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
   const makeMove = () => {
-    const limit = 100;
-    const number1 = Math.floor(Math.random() * Math.floor(limit)) + 1; // число должно быть > 0
-    const number2 = Math.floor(Math.random() * Math.floor(limit)) + 1;
+    const number1 = getRandomNumber(minNumber, maxNumber);
+    const number2 = getRandomNumber(minNumber, maxNumber);
     const correctAnswer = gcd(number1, number2);
     const question = `${number1} ${number2}`;
     return { question, correctAnswer };

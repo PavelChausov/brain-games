@@ -1,5 +1,18 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+# brain-games
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/1101d137428b02783a9d/maintainability)](https://codeclimate.com/github/pavelchausov/frontend-project-lvl1/maintainability)
 ![CI](https://github.com/pavelchausov/frontend-project-lvl1/workflows/CI/badge.svg)
+
+
+## Setup
+```sh
+$ make install
+```
+
+## Play
+```sh
+$ brain-games
+```
 
 BRAIN-EVEN:
 [![asciicast](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip.svg)](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip)

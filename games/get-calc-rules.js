@@ -1,3 +1,9 @@
+import getRandomNumber from '../utils/get-random-number.js';
+
+const rules = 'What is the result of the expression?';
+const minNumber = 0
+const maxNumber = 100;
+
 const getCalcRules = () => {
   const operations = [
     (n1, n2) => ({
@@ -13,12 +19,10 @@ const getCalcRules = () => {
       question: `${n1} + ${n2}`,
     }),
   ];
-  const rules = 'What is the result of the expression?';
   const makeMove = () => {
-    const limit = 100;
-    const number1 = Math.floor(Math.random() * Math.floor(limit));
-    const number2 = Math.floor(Math.random() * Math.floor(limit));
-    const operationIndex = Math.floor(Math.random() * Math.floor(operations.length));
+    const number1 = getRandomNumber(minNumber, maxNumber);
+    const number2 = getRandomNumber(minNumber, maxNumber);
+    const operationIndex = getRandomNumber(0, operations.length);
     const makeQuestion = operations[operationIndex];
     return makeQuestion(number1, number2);
   };

@@ -1,5 +1,6 @@
 install:
 	npm install
+	npm link
 
 start:
 	node bin/brain-games.js

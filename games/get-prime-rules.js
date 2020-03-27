@@ -1,3 +1,5 @@
+import getRandomNumber from '../utils/get-random-number.js';
+
 const isPrime = (num) => {
   const s = Math.sqrt(num);
   const iter = (t = 2) => {
@@ -12,11 +14,13 @@ const isPrime = (num) => {
   return iter();
 };
 
+const minNumber = 2;
+const maxNumber = 100;
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const getPrimeRules = () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const makeMove = () => {
-    const limit = 100;
-    const number = Math.floor(Math.random() * Math.floor(limit)) + 2; // число должно быть >= 2
+    const number = getRandomNumber(minNumber, maxNumber);
     const correctAnswer = (isPrime(number)) ? 'yes' : 'no';
     const question = `${number}`;
     return { question, correctAnswer };
