@@ -1,10 +1,11 @@
 import getRandomNumber from '../utils/get-random-number.js';
+import gameEngine from '../src/index.js';
 
 const rules = 'What is the result of the expression?';
-const minNumber = 0
+const minNumber = 0;
 const maxNumber = 100;
 
-const getCalcRules = () => {
+const calc = () => {
   const operations = [
     (n1, n2) => ({
       correctAnswer: n1 * n2,
@@ -26,6 +27,6 @@ const getCalcRules = () => {
     const makeQuestion = operations[operationIndex];
     return makeQuestion(number1, number2);
   };
-  return { rules, makeMove };
+  gameEngine({ rules, makeMove });
 };
-export default getCalcRules;
+export default calc;

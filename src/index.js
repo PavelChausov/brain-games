@@ -1,16 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const greetings = () => {
+const maxRoundsCnt = 3;
+
+const gameEngine = (gameRules) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
-const maxRoundsCnt = 3;
-
-const game = (gameRules) => {
-  const userName = greetings();
   const { rules, makeMove } = gameRules;
   console.log(rules);
   const iter = (roundNumber = 0) => {
@@ -34,4 +29,4 @@ const game = (gameRules) => {
   return iter();
 };
 
-export { greetings, game };
+export default gameEngine;

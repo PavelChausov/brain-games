@@ -1,15 +1,17 @@
 import getRandomNumber from '../utils/get-random-number.js';
+import gameEngine from '../src/index.js';
 
-const min = 0;
+const minNumber = 0;
+const minStepSize = 1;
 const maxStepSize = 15;
 const maxNumber = 100;
 const progressionSize = 10;
 const rules = 'Find the greatest common divisor of given numbers.';
 
-const makeProgression = (progressionSize = 10, startElement = 0) => {
-  const stepSize = getRandomNumber(min, maxStepSize);
-  const iter = (acc = [startElement], stepNumber = 0) => {
-    if (stepNumber === progressionSize) {
+const makeProgression = (size = 10, start = 0) => {
+  const stepSize = getRandomNumber(minStepSize, maxStepSize);
+  const iter = (acc = [start], stepNumber = 0) => {
+    if (stepNumber === size) {
       return acc;
     }
     const newElem = acc[acc.length - 1] + stepSize;
@@ -19,15 +21,15 @@ const makeProgression = (progressionSize = 10, startElement = 0) => {
 };
 const getProgressionRules = () => {
   const makeMove = () => {
-    const startElement = getRandomNumber(min, maxNumber);
+    const startElement = getRandomNumber(minNumber, maxNumber);
     const progression = makeProgression(progressionSize, startElement);
-    const indexToReplace = getRandomNumber(min, progressionSize);
+    const indexToReplace = getRandomNumber(0, progressionSize);
     const correctAnswer = progression[indexToReplace];
     const question = progression
       .map((e, i) => ((i === indexToReplace) ? '..' : e))
       .join(' ');
     return { question, correctAnswer };
   };
-  return { rules, makeMove };
+  gameEngine({ rules, makeMove });
 };
 export default getProgressionRules;

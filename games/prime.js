@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/get-random-number.js';
+import gameEngine from '../src/index.js';
 
 const isPrime = (num) => {
   const s = Math.sqrt(num);
@@ -25,6 +26,6 @@ const getPrimeRules = () => {
     const question = `${number}`;
     return { question, correctAnswer };
   };
-  return { rules, makeMove };
+  gameEngine({ rules, makeMove });
 };
 export default getPrimeRules;

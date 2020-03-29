@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { game } from '../src/index.js';
-import getCalcRules from '../games/get-calc-rules.js';
+import calc from '../games/calc.js';
 
-const gameRules = getCalcRules();
-game(gameRules);
+calc();

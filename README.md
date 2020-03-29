@@ -5,26 +5,47 @@
 
 
 ## Setup
+Для установки игр выполните следующую команду в терминале:
 ```sh
 $ make install
 ```
 
 ## Play
+Для запуска введите в терминале название игры. Победа засчитывается только в том случае, когда игрок верно ответил на все три вопроса подряд.
+
+### brain-even:
+В данной игре игроку необходимо правильно отвечать на вопрос - является ли представленное число четным.
 ```sh
-$ brain-games
+$ brain-even
 ```
+![example even gif](demo-gifs/even.gif)
 
-BRAIN-EVEN:
-[![asciicast](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip.svg)](https://asciinema.org/a/8wBjq7DacVVGJKgT96eW1tCip)
+### brain-calc:
+Поставьте себя на место калькулятора и действуйте!
+```sh
+$ brain-calc
+```
+![example calc gif](demo-gifs/calc.gif)
 
-BRAIN-CALC:
-[![asciicast](https://asciinema.org/a/qQ1JeGLsWax9e344btvqvPfAs.svg)](https://asciinema.org/a/qQ1JeGLsWax9e344btvqvPfAs)
+### brain-gcd:
+Что может быть приятнее после тяжелого трудового дня, чем поиск наибольшего общего делителя для двух чисел?
+```sh
+$ brain-gcd
+```
+![example gcd gif](demo-gifs/gcd.gif)
 
-BRAIN-GCD:
-[![asciicast](https://asciinema.org/a/8Ffp7PbUKwEQnbF7hDI63id1D.svg)](https://asciinema.org/a/8Ffp7PbUKwEQnbF7hDI63id1D)
+### brain-progression:
+Перед Вами прогрессия с одним пропущенным числом в ней. Не теряйте времени, прогрессии не ждут!
 
-BRAIN-PROGRESSION:
-[![asciicast](https://asciinema.org/a/US7E11Plvh6Qhm5XSBzmhNn8q.svg)](https://asciinema.org/a/US7E11Plvh6Qhm5XSBzmhNn8q)
+```sh
+$ brain-gcd
+```
+![example progression gif](demo-gifs/progression.gif)
 
-BRAIN-PRIME:
-[![asciicast](https://asciinema.org/a/TTRD8KmqMtT4GQiCkqimOKpdJ.svg)](https://asciinema.org/a/TTRD8KmqMtT4GQiCkqimOKpdJ)
+### brain-prime:
+Простому простофиле так просто простоту числа не определить!
+А справитесь ли с этой задаче Вы?
+```sh
+$ brain-gcd
+```
+![example prime gif](demo-gifs/prime.gif)

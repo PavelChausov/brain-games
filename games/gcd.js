@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/get-random-number.js';
+import gameEngine from '../src/index.js';
 
 const gcd = (a, b) => {
   if (!b) {
@@ -19,6 +20,6 @@ const getGCDRules = () => {
     const question = `${number1} ${number2}`;
     return { question, correctAnswer };
   };
-  return { rules, makeMove };
+  gameEngine({ rules, makeMove });
 };
 export default getGCDRules;

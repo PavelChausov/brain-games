@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { game } from '../src/index.js';
-import getEvenRules from '../games/get-even-rules.js';
+import even from '../games/even.js';
 
-const gameRules = getEvenRules();
-game(gameRules);
+even();

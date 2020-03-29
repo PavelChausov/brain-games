@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { game } from '../src/index.js';
-import getProgressionRules from '../games/get-progression-rules.js';
+import progression from '../games/progression.js';
 
-const gameRules = getProgressionRules();
-game(gameRules);
+progression();

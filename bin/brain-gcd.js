@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { game } from '../src/index.js';
-import getGCDRules from '../games/get-gcd-rules.js';
+import gcd from '../games/gcd.js';
 
-const gameRules = getGCDRules();
-game(gameRules);
+gcd();

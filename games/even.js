@@ -1,7 +1,8 @@
 import getRandomNumber from '../utils/get-random-number.js';
+import gameEngine from '../src/index.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-const minNumber = 0
+const minNumber = 0;
 const maxNumber = 100;
 
 
@@ -12,6 +13,6 @@ const getEvenRules = () => {
     const question = number.toString();
     return { question, correctAnswer };
   };
-  return { rules, makeMove };
+  gameEngine({ rules, makeMove });
 };
 export default getEvenRules;
