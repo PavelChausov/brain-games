@@ -26,6 +26,6 @@ const getPrimeRules = () => {
     const question = `${number}`;
     return { question, correctAnswer };
   };
-  gameEngine({ rules, makeMove });
+  gameEngine(rules, makeMove);
 };
 export default getPrimeRules;

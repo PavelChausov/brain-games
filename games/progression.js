@@ -30,6 +30,6 @@ const getProgressionRules = () => {
       .join(' ');
     return { question, correctAnswer };
   };
-  gameEngine({ rules, makeMove });
+  gameEngine(rules, makeMove);
 };
 export default getProgressionRules;

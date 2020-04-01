@@ -20,6 +20,6 @@ const getGCDRules = () => {
     const question = `${number1} ${number2}`;
     return { question, correctAnswer };
   };
-  gameEngine({ rules, makeMove });
+  gameEngine(rules, makeMove);
 };
 export default getGCDRules;
