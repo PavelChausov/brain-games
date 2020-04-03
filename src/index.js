@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 
 const maxRoundsCount = 3;
 
-const gameEngine = (rules, makeMove) => {
+const startGame = (description, makeMove) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(rules);
+  console.log(description);
   const iter = (roundNumber = 0) => {
     if (roundNumber === maxRoundsCount) {
       console.log(`Congratulations, ${userName}!`);
@@ -16,8 +16,9 @@ const gameEngine = (rules, makeMove) => {
       question,
       correctAnswer,
     } = makeMove();
-    const userAnswer = readlineSync.question(`Question: ${question} \nYour answer: `);
-    if (userAnswer.toString() !== correctAnswer.toString()) {
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your Answer: ');
+    if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is the wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Lets try again, ${userName}!`);
       return null;
@@ -28,4 +29,4 @@ const gameEngine = (rules, makeMove) => {
   return iter();
 };
 
-export default gameEngine;
+export default startGame;

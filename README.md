@@ -38,7 +38,7 @@ $ brain-gcd
 Перед Вами прогрессия с одним пропущенным числом в ней. Не теряйте времени, прогрессии не ждут!
 
 ```sh
-$ brain-gcd
+$ brain-progression
 ```
 ![example progression gif](demo-gifs/progression.gif)
 
@@ -46,6 +46,6 @@ $ brain-gcd
 Простому простофиле так просто простоту числа не определить!
 А справитесь ли с этой задаче Вы?
 ```sh
-$ brain-gcd
+$ brain-prime
 ```
 ![example prime gif](demo-gifs/prime.gif)
