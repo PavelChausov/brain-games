@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1101d137428b02783a9d/maintainability)](https://codeclimate.com/github/pavelchausov/frontend-project-lvl1/maintainability)
 ![CI](https://github.com/pavelchausov/frontend-project-lvl1/workflows/CI/badge.svg)
 
+"Игры разума" – набор из 5 консольных игр построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы на которые нужно дать правильные ответы. После трех правильных ответов считается что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
 ## Setup
 Для установки игр выполните следующую команду в терминале:
