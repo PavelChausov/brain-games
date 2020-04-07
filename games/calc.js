@@ -1,5 +1,5 @@
 import getRandomNumber from '../src/utils/get-random-number.js';
-import startGame from '../src/index.js';
+import playGame from '../src/index.js';
 
 const description = 'What is the result of the expression?';
 const minNumber = 0;
@@ -17,7 +17,7 @@ const calculate = (num1, num2, operation) => {
       return null;
   }
 };
-const makeMove = () => {
+const getRoundData = () => {
   const number1 = getRandomNumber(minNumber, maxNumber);
   const number2 = getRandomNumber(minNumber, maxNumber);
   const operationIndex = getRandomNumber(0, operations.length - 1);
@@ -27,7 +27,7 @@ const makeMove = () => {
   return { question, correctAnswer };
 };
 
-const startCalcGame = () => {
-  startGame(description, makeMove);
+const playCalcGame = () => {
+  playGame(description, getRoundData);
 };
-export default startCalcGame;
+export default playCalcGame;
