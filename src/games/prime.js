@@ -1,12 +1,16 @@
-import getRandomNumber from '../src/utils/get-random-number.js';
-import playGame from '../src/index.js';
+import getRandomNumber from '../utils/get-random-number.js';
+import playGame from '../index.js';
 
 const minNumber = 2;
 const maxNumber = 100;
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
+  }
+  if (num === 2) {
+    return true;
   }
   const s = Math.sqrt(num);
   const iter = (t) => {
@@ -20,6 +24,7 @@ const isPrime = (num) => {
   };
   return iter(2);
 };
+
 const getRoundData = () => {
   const question = getRandomNumber(minNumber, maxNumber);
   const correctAnswer = (isPrime(question)) ? 'yes' : 'no';
@@ -29,4 +34,5 @@ const getRoundData = () => {
 const playPrimeGame = () => {
   playGame(description, getRoundData);
 };
+
 export default playPrimeGame;

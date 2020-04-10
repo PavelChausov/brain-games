@@ -1,5 +1,5 @@
-import getRandomNumber from '../src/utils/get-random-number.js';
-import playGame from '../src/index.js';
+import getRandomNumber from '../utils/get-random-number.js';
+import playGame from '../index.js';
 
 const minNumber = 0;
 const maxNumber = 100;
@@ -22,7 +22,7 @@ const generateQuestion = (limit, startElement, stepSize, indexToReplace) => {
 const getRoundData = () => {
   const startElement = getRandomNumber(minNumber, maxNumber);
   const stepSize = getRandomNumber(minStepSize, maxStepSize);
-  const indexToReplace = getRandomNumber(0, progressionSize);
+  const indexToReplace = getRandomNumber(0, progressionSize - 1);
   const question = generateQuestion(progressionSize, startElement, stepSize, indexToReplace).join(' ');
   const correctAnswer = (startElement + stepSize * indexToReplace).toString();
   return { question, correctAnswer };
@@ -31,4 +31,5 @@ const getRoundData = () => {
 const playProgressionGame = () => {
   playGame(description, getRoundData);
 };
+
 export default playProgressionGame;
