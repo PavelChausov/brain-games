@@ -13,8 +13,6 @@ const getRoundData = () => {
   return { question, correctAnswer };
 };
 
-const playEvenGame = () => {
-  playGame(description, getRoundData);
-};
+const playEvenGame = () => playGame(description, getRoundData);
 
 export default playEvenGame;

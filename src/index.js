@@ -17,12 +17,12 @@ const playGame = (description, getRoundData) => {
     if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is the wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Lets try again, ${userName}!`);
-      return 'lose';
+      return false;
     }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
-  return 'win';
+  return true;
 };
 
 export default playGame;

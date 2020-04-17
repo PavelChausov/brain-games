@@ -9,16 +9,13 @@ const isPrime = (num) => {
   if (num <= 1) {
     return false;
   }
-  if (num === 2) {
-    return true;
-  }
-  const s = Math.sqrt(num);
+  const s = Math.floor(Math.sqrt(num));
   const iter = (t) => {
-    if (num % t === 0) {
-      return false;
-    }
     if (t > s) {
       return true;
+    }
+    if (num % t === 0) {
+      return false;
     }
     return iter(t + 1);
   };
@@ -31,8 +28,6 @@ const getRoundData = () => {
   return { question, correctAnswer };
 };
 
-const playPrimeGame = () => {
-  playGame(description, getRoundData);
-};
+const playPrimeGame = () => playGame(description, getRoundData);
 
 export default playPrimeGame;

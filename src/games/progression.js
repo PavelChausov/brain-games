@@ -28,8 +28,6 @@ const getRoundData = () => {
   return { question, correctAnswer };
 };
 
-const playProgressionGame = () => {
-  playGame(description, getRoundData);
-};
+const playProgressionGame = () => playGame(description, getRoundData);
 
 export default playProgressionGame;
